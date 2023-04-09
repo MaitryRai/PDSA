@@ -1,0 +1,18 @@
+import math
+def prime(n):
+  result=True
+  for i in range(2,int(math.sqrt(n)+1)):
+      if(n%i==0):
+          result=False
+          break
+   return result
+           
+
+def primeupto(m):
+   pl=[]
+   for i in range(2,m+1):
+         if(prime(i)):
+              pl.append(i)
+   return pl
+   
+     
