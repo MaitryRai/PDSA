@@ -1,0 +1,23 @@
+import math
+def prime(n):
+  if(n==1):
+    return False
+  result=True
+  for i in range(2,int(math.sqrt(n)+1)):
+    if(n%i==0):
+      result=False
+      break
+  return result
+  
+  
+  def twin_primes(n):
+    tpl={}
+    for i in range(2,n-1):
+       if(prime(i)):
+           if(prime(i+2)):
+                tpl.append((i,i+2))
+    return tpl
+    
+ 
+ print(twin_primes(30))
+           
