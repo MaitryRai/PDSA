@@ -1,0 +1,28 @@
+method 1:
+
+def gcd(n,m):
+   for i in range(min(m,n)+1):
+         if(m%i==0 and n%i==0):
+               f=i
+   return f
+   
+ 
+ method 2:
+ def gcd(n,m):
+    b=min(m,n)
+    a=max(m,n)
+    if(a%b==0):
+       return b
+    else:
+       return gcd(b,a-b)
+  
+  
+  method 3 euclid Algorithm: 
+  def gcd(m,n):
+      a,b=(max(m,n),min(a,b))
+      if(a%b==0):
+          return b
+      return gcd(b,a%b)
+      
+      
+             
